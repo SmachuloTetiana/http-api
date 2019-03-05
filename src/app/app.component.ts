@@ -37,4 +37,8 @@ export class AppComponent {
       (res) => console.log(res)
     )
   }
+
+  doPut() {
+    return this.http.put('https://http-api.firebaseio.com/data.json', {params: {description: 'Hello'}}).subscribe(res => console.log(res))
+  }
 }
